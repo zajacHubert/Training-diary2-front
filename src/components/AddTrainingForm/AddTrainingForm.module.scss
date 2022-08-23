@@ -1,0 +1,124 @@
+.add {
+    border-radius: 12px;
+    width: 80%;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: #444;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.add__form {
+    width: 100%;
+}
+
+.add__title {
+    flex-basis: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 1rem;
+    margin-top: 0;
+
+    @media(max-width:1200px) {
+        font-size: 1.6rem;
+    }
+
+    @media(max-width:768px) {
+        font-size: 1.3rem;
+    }
+}
+
+.add__subcontainer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+
+    @media(max-width:768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.add_input {
+    border-radius: 6px;
+    padding: 0.2rem 1rem;
+    width: 25%;
+    font-family: inherit;
+    font-size: 1.2rem;
+
+    @media(max-width:1200px) {
+        font-size: 1rem;
+    }
+
+
+    @media(max-width:1024px) {
+        font-size: 0.8rem;
+    }
+
+    @media(max-width:768px) {
+        width: 60%;
+        margin-top: 0.5rem;
+    }
+}
+
+.add__btn {
+    min-width: 10%;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 0.2rem 0;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    background-color: #1769aa;
+    color: #ababab;
+    margin-left: 2rem;
+    transition: .4s;
+
+    &:hover,
+    &:active {
+        background-color: #2196f3;
+        color: white;
+        cursor: pointer;
+    }
+
+    @media(max-width:1200px) {
+        font-size: 1rem;
+    }
+
+    @media(max-width:1024px) {
+        font-size: 0.8rem;
+    }
+
+    @media(max-width:768px) {
+        font-size: 0.7rem;
+        min-width: 20%;
+    }
+}
+
+.add__p__error {
+    color: rgb(202, 21, 21);
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    width: 80%;
+
+
+    @media(max-width:1200px) {
+        font-size: 1rem;
+    }
+
+    @media(max-width:1024px) {
+        font-size: 0.8rem;
+    }
+
+    @media(max-width:768px) {
+        font-size: 0.7rem;
+
+    }
+
+    &:first-letter {
+        text-transform: uppercase;
+    }
+}
