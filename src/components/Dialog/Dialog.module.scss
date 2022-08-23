@@ -1,0 +1,75 @@
+.overlay {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog {
+    transform: translate(50%, 50%);
+    border-radius: 12px;
+    font-size: 1.6rem;
+    width: 50%;
+    min-height: 30vh;
+    background-color: #444;
+    color: white;
+    text-align: center;
+
+}
+
+.dialog__title {
+    flex-basis: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    max-width: 80%;
+    margin: 0 auto;
+
+    @media(max-width:1200px) {
+        font-size: 1.6rem;
+    }
+
+    @media(max-width:768px) {
+        font-size: 1.3rem;
+    }
+
+}
+
+.dialog__btn {
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 0.3rem 0;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    background-color: #1769aa;
+    color: #ababab;
+    transition: .4s;
+    width: 20%;
+    margin: 2rem;
+
+    &:hover,
+    &:active {
+        background-color: #2196f3;
+        color: white;
+        cursor: pointer;
+    }
+
+    @media(max-width:1200px) {
+        font-size: 1.2rem;
+    }
+
+    @media(max-width:768px) {
+        font-size: 1rem;
+    }
+
+    @media(max-width:480px) {
+        margin: 2rem 0.5rem;
+        min-width: 25%;
+
+    }
+
+}
