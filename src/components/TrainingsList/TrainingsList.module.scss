@@ -1,0 +1,43 @@
+.list {
+    border-radius: 12px;
+    width: 80%;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: #444;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.list__title {
+
+    flex-basis: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 1rem;
+    margin-top: 0;
+
+    @media(max-width:1200px) {
+        font-size: 1.6rem;
+    }
+
+    @media(max-width:768px) {
+        font-size: 1.3rem;
+    }
+
+
+
+}
+
+.list__p__error {
+    color: rgb(202, 21, 21);
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    width: 80%;
+
+    &:first-letter {
+        text-transform: uppercase;
+    }
+}
