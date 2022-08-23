@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import styles from './TrainingsList.module.scss';
+
 import { SearchedTrainingsList } from "../../shared/types/training";
 import { getAllTrainings } from '../../utils/axios-functions';
 import { Spinner } from "../Spinner/Spinner";
 import { TrainingsTable } from "../TrainingsTable/TrainingsTable";
-import styles from './TrainingsList.module.scss';
 
 
 export const TrainingsList = () => {
@@ -28,7 +29,6 @@ export const TrainingsList = () => {
                 setError(errMessage);
             }
         }
-
     }
 
     if (trainings === null) {
@@ -38,7 +38,7 @@ export const TrainingsList = () => {
     if (trainings.length === 0) {
         return (
             <div className={styles.list}>
-                <h2>You have not saved any training yet</h2>
+                <h2 className={styles.list__title}>You have not saved any training yet</h2>
             </div>
         )
     }

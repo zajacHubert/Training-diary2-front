@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import styles from './TrainingsTable.module.scss';
+
 import { SearchedTrainingsList } from "../../shared/types/training";
 import { BiShow } from 'react-icons/bi';
 import { MdEdit, MdDelete } from 'react-icons/md';
-import { Link } from "react-router-dom";
 import { deleteTraining } from '../../utils/axios-functions';
-import styles from './TrainingsTable.module.scss';
 import { Dialog } from '../Dialog/Dialog';
 
 interface Props {
@@ -12,14 +13,12 @@ interface Props {
     loadTrainings: () => void;
 }
 
-
 export const TrainingsTable = ({ trainings, loadTrainings }: Props) => {
 
     const [showDialog, setShowDialog] = useState(false);
     const [title, setTitle] = useState('');
     const [date, setDate] = useState<Date | null>(null);
     const [error, setError] = useState('');
-
 
     const handleDelete = (title: string, date: Date) => {
         setTitle(title);
@@ -42,8 +41,6 @@ export const TrainingsTable = ({ trainings, loadTrainings }: Props) => {
                 setError(errMessage);
             }
         }
-
-
     }
 
 
@@ -89,7 +86,6 @@ export const TrainingsTable = ({ trainings, loadTrainings }: Props) => {
                         </tr>
                     ))}
                 </tbody>
-
             </table>
             {error && <p className={styles.delete__p__error}>{error}</p>}
         </>

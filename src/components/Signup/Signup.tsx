@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
+import styles from './Signup.module.scss';
+
 import { signin, signup } from "../../utils/axios-functions";
 import { Modal } from "../Modal/Modal";
-import styles from './Signup.module.scss';
+
 
 export const Signup = () => {
 

@@ -1,8 +1,10 @@
 import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
+import styles from './EditTrainingForm.module.scss';
+
 import { SimpleExerciseAddToForm } from "../../shared/types/training";
 import { editExercise, getSingleTraining } from "../../utils/axios-functions";
-import styles from './EditTrainingForm.module.scss';
+
 
 type T = keyof SimpleExerciseAddToForm;
 
@@ -13,7 +15,6 @@ export const EditTrainingForm = () => {
     const [inputFields, setInputFields] = useState<SimpleExerciseAddToForm[]>([]);
     const [redirect, setRedirect] = useState(false);
     const [error, setError] = useState('');
-
 
     useEffect(() => {
         (async () => {
@@ -28,7 +29,6 @@ export const EditTrainingForm = () => {
         values[index][event.target.name as T] = event.target.value;
         setInputFields(values);
     }
-
 
     const formSubmitHandler = async (e: FormEvent) => {
         e.preventDefault();
@@ -52,14 +52,10 @@ export const EditTrainingForm = () => {
                         setError(errMessage);
                     }
                 }
-
             })
         );
         setRedirect(true);
-
     }
-
-
 
     return (
         <>
@@ -115,11 +111,9 @@ export const EditTrainingForm = () => {
                         )
                     }
                     {error && <p className={styles.edit__p__error}>{error}</p>}
-
                     <button className={styles.add__btn}>Save</button>
                 </form>
             </div>
-
         </>
     )
 }

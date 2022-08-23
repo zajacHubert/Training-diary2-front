@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from './SingleTraining.module.scss';
+
 import { getSingleTraining } from "../../utils/axios-functions";
 import { Training } from "../../shared/types/training";
 
@@ -45,7 +46,6 @@ export const SingleTraining = () => {
                         </tr>
                     ))}
                 </tbody>
-
             </table>
         </div>
 

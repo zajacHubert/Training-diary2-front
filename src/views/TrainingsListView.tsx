@@ -7,7 +7,6 @@ export const TrainingsListView = () => {
         <>
             <Header />
             <TrainingsList />
-
         </>
     )
 }

@@ -1,8 +1,8 @@
 import React, { ChangeEvent, useEffect, useState, useCallback } from "react";
 import styles from './ExerciseInputs.module.scss';
+
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import { SimpleExerciseAddToForm } from "../../shared/types/training";
-
 
 interface Props {
     inputFields: SimpleExerciseAddToForm[];
@@ -25,7 +25,6 @@ export const ExerciseInputs = ({ inputFields, changeInputHandler, removeFieldHan
     useEffect(() => {
         window.addEventListener('resize', handleResize, false);
     }, [handleResize]);
-
 
     return (
         <>

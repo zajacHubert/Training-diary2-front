@@ -8,7 +8,6 @@ import { SingupView } from './views/SignupView';
 import { SingleTrainingView } from './views/SingleTrainingView';
 import { TrainingsListView } from './views/TrainingsListView';
 
-
 export const App = () => {
   return (
     <Routes>

@@ -1,11 +1,9 @@
 import React, { Dispatch } from "react";
-
 import styles from './Modal.module.scss';
 
 interface Props {
     setShow: Dispatch<React.SetStateAction<boolean>>;
     setRedirect: Dispatch<React.SetStateAction<boolean>>;
-
 }
 
 export const Modal = ({ setShow, setRedirect }: Props) => {

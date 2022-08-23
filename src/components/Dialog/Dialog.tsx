@@ -1,7 +1,5 @@
 import React, { Dispatch } from "react";
-
 import styles from './Dialog.module.scss';
-
 interface Props {
     title: string;
     date: Date | null;
@@ -15,7 +13,6 @@ export const Dialog = ({ setShowDialog, removeTraining, title, date }: Props) =>
         removeTraining(title, date);
         setShowDialog(false);
     }
-
 
     return (
         <div className={styles.overlay} >
@@ -34,7 +31,6 @@ export const Dialog = ({ setShowDialog, removeTraining, title, date }: Props) =>
                     No
                 </button>
             </div >
-
         </div >
     )
 }

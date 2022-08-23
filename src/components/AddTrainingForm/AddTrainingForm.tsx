@@ -64,7 +64,6 @@ export const AddTrainingForm = () => {
                         setError(errMessage);
                     }
                 }
-
             })
         );
 
@@ -77,7 +76,6 @@ export const AddTrainingForm = () => {
         ]);
         setTrainingDate(new Date().toDateString().slice(0, 10));
         setTrainingName('');
-
     }
 
     return (
@@ -112,7 +110,6 @@ export const AddTrainingForm = () => {
                     <button className={styles.add__btn}>Save</button>
                 </form>
             </div>
-
         </>
     )
 

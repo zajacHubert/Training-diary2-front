@@ -56,13 +56,8 @@ export const Login = () => {
                     <button className={styles.login__btn} onClick={e => handleFormSubmit(e, 'signin')}>sign in</button>
                     {signinError && <p className={styles.login__p__error}>{signinError}</p>}
                     <p className={styles.login__p}>Don't have an account?<Link to="/signup" style={{ textDecoration: 'none' }}><span className={styles.login__span}>Sign up</span></Link></p>
-
                 </form>
-
-
-
             </div>
         </>
-
     )
 }
