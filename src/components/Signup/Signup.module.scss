@@ -1,0 +1,129 @@
+.login {
+    border-radius: 12px;
+    width: 50%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #444;
+    color: white;
+
+    @media(max-width:1024px) {
+        width: 60%;
+    }
+
+    @media(max-width:768px) {
+        width: 70%;
+    }
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding-bottom: 1rem;
+
+    @media(max-width:1024px) {
+        max-width: 70%;
+    }
+
+}
+
+.title {
+    margin: 3rem 0;
+    font-weight: 900;
+    font-size: 2.8rem;
+
+    @media(max-width:768px) {
+        font-size: 2.2rem;
+    }
+}
+
+.login__label,
+.login__input {
+    width: 100%;
+    text-align: center;
+    margin: 0.4rem 0;
+    font-size: 1.2rem;
+}
+
+.login__label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.login__input {
+    border-radius: 5px;
+    height: 2rem;
+}
+
+.login__btn {
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 0.3rem 0;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    background-color: #1769aa;
+    color: #ababab;
+    transition: .4s;
+
+    &:hover,
+    &:active {
+        background-color: #2196f3;
+        color: white;
+        cursor: pointer;
+    }
+
+}
+
+.login__p {
+    margin: 1.2rem auto 0.5rem;
+
+    @media(max-width:768px) {
+        width: 100%;
+        text-align: center;
+
+    }
+}
+
+.login__p__error {
+    color: rgb(202, 21, 21);
+    font-size: 1rem;
+    margin: 0 auto;
+
+    &:first-letter {
+        text-transform: uppercase;
+    }
+
+    @media(max-width:1200px) {
+        font-size: 1rem;
+    }
+
+    @media(max-width:1024px) {
+        font-size: 0.9rem;
+    }
+
+    @media(max-width:768px) {
+        font-size: 0.8rem;
+
+    }
+}
+
+.login__span {
+    margin-left: 1rem;
+    font-weight: 900;
+    color: #1769aa;
+    font-size: 1.1rem;
+    transition: .4s;
+
+    &:hover {
+        color: #2196f3;
+    }
+
+    @media(max-width:768px) {
+        display: block;
+        margin: 1rem auto;
+        font-size: 1.3rem;
+    }
+}
