@@ -1,24 +1,28 @@
 import axios from "axios";
 import { ExerciseAddToForm } from '../shared/types/training';
 
+const isDev = process.env.NODE_ENV === 'development';
+
+const baseUrl = isDev ? 'http://localhost:3001' : 'https://training-diary-hubert.herokuapp.com';
+
 export const getAllTrainings = async () => {
     const token = localStorage.getItem('jwt');
     const config = {
         headers: { Authorization: `Bearer ${token}` }
     }
-    const res = await axios.get('http://localhost:3001/trainings', config);
+    const res = await axios.get(`${baseUrl}/trainings`, config);
     return res;
 }
 
 export const signup = async (username: string, password: string) => {
-    await axios.post('http://localhost:3001/auth/signup', {
+    await axios.post(`${baseUrl}/auth/signup`, {
         username,
         password,
     });
 }
 
 export const signin = async (username: string, password: string) => {
-    const res = await axios.post('http://localhost:3001/auth/signin', {
+    const res = await axios.post(`${baseUrl}/auth/signin`, {
         username,
         password,
     });
@@ -30,7 +34,7 @@ export const saveExercise = async (exercise: ExerciseAddToForm) => {
     const config = {
         headers: { Authorization: `Bearer ${token}` }
     }
-    await axios.post('http://localhost:3001/trainings', exercise, config);
+    await axios.post(`${baseUrl}/trainings`, exercise, config);
 }
 
 export const deleteTraining = async (title: string, date: Date) => {
@@ -38,7 +42,7 @@ export const deleteTraining = async (title: string, date: Date) => {
     const config = {
         headers: { Authorization: `Bearer ${token}` }
     }
-    const res = await axios.delete(`http://localhost:3001/trainings/${title}/${date}`, config);
+    const res = await axios.delete(`${baseUrl}/trainings/${title}/${date}`, config);
     return res;
 }
 

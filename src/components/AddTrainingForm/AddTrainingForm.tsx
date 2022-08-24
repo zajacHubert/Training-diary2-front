@@ -78,6 +78,8 @@ export const AddTrainingForm = () => {
         setTrainingName('');
     }
 
+
+
     return (
         <>
             <div className={styles.add}>
