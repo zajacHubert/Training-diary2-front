@@ -5,8 +5,8 @@ import { BrowserRouter, HashRouter } from "react-router-dom";
 import { App } from './App';
 
 const isDev = process.env.NODE_ENV === 'development';
-// const browser = <BrowserRouter>  </BrowserRouter >;
-// const hash = <HashRouter> <App /></HashRouter>
+const browser = <BrowserRouter>  </BrowserRouter >;
+const hash = <HashRouter> <App /></HashRouter>
 
 
 
@@ -16,10 +16,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <>
-    {/* {isDev ? browser : hash} */}
-    <HashRouter>
+    {isDev ? browser : hash}
+    {/* <HashRouter>
       <App />
-    </HashRouter>
+    </HashRouter> */}
   </>
 );
 
