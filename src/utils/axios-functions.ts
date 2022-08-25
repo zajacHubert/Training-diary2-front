@@ -51,7 +51,7 @@ export const getSingleTraining = async (title: string, date: Date) => {
     const config = {
         headers: { Authorization: `Bearer ${token}` }
     }
-    const res = await axios.get(`http://localhost:3001/trainings/${title}/${date}`, config);
+    const res = await axios.get(`${baseUrl}/trainings/${title}/${date}`, config);
     return res;
 }
 
@@ -60,6 +60,6 @@ export const editExercise = async (title: string, date: Date, exercise: Exercise
     const config = {
         headers: { Authorization: `Bearer ${token}` }
     }
-    await axios.patch(`http://localhost:3001/trainings/${title}/${date}`, exercise, config);
+    await axios.patch(`${baseUrl}/trainings/${title}/${date}`, exercise, config);
 }
 
